@@ -1,0 +1,110 @@
+/* General Body and Font Styling */
+body {
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container for the entire game */
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Prevents it from getting too wide on large screens */
+}
+
+.title {
+    font-size: 2rem; /* Using relative units like 'rem' is better for responsiveness */
+    font-weight: bold;
+}
+
+/* Flex container for the move buttons */
+.moves-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Replaces margin-right for better spacing */
+    flex-wrap: wrap; /* Allows buttons to wrap onto the next line on small screens */
+    margin-bottom: 30px;
+}
+
+.move-button {
+    background-color: transparent;
+    border: 3px solid white;
+    width: 100px; /* Smaller base size for mobile */
+    height: 100px;
+    border-radius: 50%; /* A 50% radius always creates a perfect circle */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.15s; /* Smooth hover effect */
+}
+
+.move-button:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.move-icon {
+    height: 50px; /* Adjusted icon size */
+}
+
+/* Styling for the results, moves, and score text */
+.info-container {
+    min-height: 150px; /* Prevents layout shifts when text appears/disappears */
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.moves-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.score {
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.reset-score-button {
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.15s;
+}
+
+.reset-score-button:hover {
+    opacity: 0.8;
+}
+
+/* --- Media Query for Larger Screens --- */
+/* This code applies ONLY when the screen width is 600px or more */
+@media (min-width: 600px) {
+    .title {
+        font-size: 2.5rem; /* Make title larger on desktop */
+    }
+
+    .move-button {
+        width: 120px; /* Increase button size on desktop */
+        height: 120px;
+    }
+
+    .move-icon {
+        height: 60px; /* Increase icon size */
+    }
+}
